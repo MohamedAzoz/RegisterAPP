@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
+    <title>Register</title>
+</head>
+<body class="container d-flex flex-column justify-content-center align-items-center" style="height: 100vh;">
+<form id="form" class="form form-control w-50 text-bg-dark d-grid gap-2 py-3">
+  <div class="col-10 m-auto">
+    <!-- is-invalid -->
+    <label for="Username" class="form-label">Username</label>
+    <div class="input-group has-validation">
+      <span class="input-group-text" id="inputGroupPrepend3">@</span>
+      <input type="text" class="form-control" name="username" id="Username" aria-describedby="inputGroupPrepend3 UsernameFeedback" required>
+      <div id="UsernameFeedback" class="invalid-feedback">
+        Please choose a username.
+      </div>
+    </div>
+  </div>
+  <div class="col-10 m-auto">
+    <label for="Email" class="form-label">Email</label>
+    <input type="text" pattern="[a-zA-Z0-9]+@gmail\.com$" name="email" class="form-control" id="Email" aria-describedby="EmailFeedback" required>
+    <div id="EmailFeedback" class="invalid-feedback">
+      Please provide a valid Email.
+    </div>
+  </div>
+
+  <div class="col-10 m-auto">
+    <label for="Password" class="form-label">Password</label>
+    <input type="text" class="form-control" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" id="Password" aria-describedby="PasswordFeedback" required>
+    <div id="PasswordFeedback" class="invalid-feedback">
+      Please provide a valid Password.
+    </div>
+  </div>
+
+  <div class="col-10 m-auto">
+    <label for="PasswordConfirmed" class="form-label">PasswordConfirmed</label>
+    <input type="text" class="form-control" name="passwordConfirmed" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" id="PasswordConfirmed" aria-describedby="PasswordConfirmedFeedback" required>
+    <div id="PasswordConfirmedFeedback" class="invalid-feedback">
+      Please provide a valid PasswordConfirmed.
+    </div>
+  </div>
+  <div id="msg">
+
+  </div>
+  <div class="col-10 m-auto">
+    <button class="btn btn-primary" onclick="Submit()" type="button">Submit</button>
+  </div>
+</form>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
